@@ -1,18 +1,18 @@
 /*
   Chase's colors. Change these to recolor the site.
-  --red-card is the same red, a touch deeper, so white text on the card stays readable.
+  Bright, fully saturated red, blue, yellow, and pink.
 */
 :root {
   color-scheme: light;
-  --red: #e63946;
-  --red-card: #dc3643;
-  --blue: #1d4ed8;
-  --yellow: #ffd23f;
-  --pink: #ff5fa2;
-  --ink: #14142b;
-  --paper: #fffaf0;
+  --red: #ff0000;
+  --blue: #0055ff;
+  --yellow: #ffff00;
+  --pink: #ff1493;
+  --ink: #0a0a0a;
+  --paper: #ffffff;
   --max: 60rem;
-  --font: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font: "DM Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --display: "Anton", "Arial Narrow", Impact, sans-serif;
 }
 
 * { box-sizing: border-box; }
@@ -63,16 +63,17 @@ body {
 }
 .hero h1 {
   margin: 0;
-  font-size: clamp(2.5rem, 8vw, 5.25rem);
-  font-weight: 800;
-  line-height: 0.98;
-  letter-spacing: -0.03em;
+  font-family: var(--display);
+  font-size: clamp(2.6rem, 8vw, 5.6rem);
+  font-weight: 400;
+  line-height: 0.92;
+  letter-spacing: 0.02em;
 }
 .hero h1 span { color: var(--yellow); }
 .hero p {
-  margin: 1rem 0 0;
-  font-size: clamp(1.1rem, 2.4vw, 1.55rem);
-  font-weight: 650;
+  margin: 0.85rem 0 0;
+  font-size: clamp(1.1rem, 2.4vw, 1.5rem);
+  font-weight: 600;
   line-height: 1.35;
   max-width: 34rem;
 }
@@ -83,9 +84,9 @@ body {
   z-index: 0;
   pointer-events: none;
 }
-.s1 { width: 22rem; height: 22rem; background: var(--red); right: -6rem; top: -6rem; }
-.s2 { width: 12rem; height: 12rem; background: var(--yellow); right: 8rem; bottom: -4rem; }
-.s3 { width: 7rem; height: 7rem; background: var(--pink); right: 2rem; bottom: 5rem; }
+.s1 { width: 24rem; height: 24rem; background: var(--red); right: -7rem; top: -8rem; }
+.s2 { width: 13rem; height: 13rem; background: var(--yellow); right: 7rem; bottom: -4.5rem; }
+.s3 { width: 8rem; height: 8rem; background: var(--pink); right: 1.5rem; bottom: 4.5rem; }
 
 .stripe {
   height: 0.6rem;
@@ -106,9 +107,12 @@ main {
   padding: 2.25rem 1.25rem 3rem;
 }
 main h2 {
-  font-size: 1.5rem;
+  font-family: var(--display);
+  font-size: clamp(1.8rem, 4vw, 2.4rem);
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 0.03em;
   margin: 0 0 1rem;
-  letter-spacing: -0.02em;
 }
 
 .cards {
@@ -124,11 +128,15 @@ main h2 {
   box-shadow: 6px 6px 0 var(--ink);
 }
 .card h3 {
-  margin: 0 0 0.35rem;
-  font-size: 1.25rem;
+  margin: 0 0 0.4rem;
+  font-family: var(--display);
+  font-size: 1.65rem;
+  font-weight: 400;
+  line-height: 1.05;
+  letter-spacing: 0.03em;
 }
 .card p { margin: 0; }
-.c-red { background: var(--red-card); color: #fff; }
+.c-red { background: var(--red); color: var(--ink); }
 .c-yellow { background: var(--yellow); color: var(--ink); }
 .c-pink { background: var(--pink); color: var(--ink); }
 
@@ -153,9 +161,10 @@ footer p { margin: 0; }
     padding: 4.5rem 1.25rem 3.25rem;
     align-items: flex-start;
   }
-  .s1 { width: 14rem; height: 14rem; right: -5rem; top: -5rem; }
-  .s2 { width: 8rem; height: 8rem; right: 3rem; bottom: -3rem; }
-  .s3 { width: 4.5rem; height: 4.5rem; right: 0.75rem; bottom: 3rem; }
+  .s1 { width: 12rem; height: 12rem; right: -4.5rem; top: -4.5rem; }
+  .s2 { width: 7.5rem; height: 7.5rem; right: 2.2rem; bottom: -3rem; }
+  .s3 { width: 4.25rem; height: 4.25rem; right: 0.6rem; bottom: 2.4rem; }
+  .card h3 { font-size: 1.5rem; }
   .hero p { max-width: 18rem; }
   .card { box-shadow: 4px 4px 0 var(--ink); }
 }
