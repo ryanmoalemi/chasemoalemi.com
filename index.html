@@ -34,7 +34,7 @@
   <meta name="application-name" content="Chase Moalemi">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Anton&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Oswald:wght@200&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
@@ -80,7 +80,7 @@
         </div>
         <h1 id="hero-title" aria-label="Hi, I’m Chase Moalemi">
           <span class="typewrite" aria-hidden="true">
-            <span class="typewrite-ghost">Hi, I’m <span class="accent">Chase Moalemi</span><span class="typewrite-cursor typewrite-cursor-reserve">|</span></span>
+            <span class="typewrite-ghost"><span class="hero-hello">Hi, I’m</span> <span class="accent">Chase Moalemi</span><span class="typewrite-cursor typewrite-cursor-reserve">|</span></span>
             <span class="typewrite-row"><span class="typewrite-text"></span><span class="typewrite-cursor">|</span></span>
           </span>
         </h1>
@@ -99,7 +99,21 @@
               var mid = i > nameAt ? full.slice(nameAt, Math.min(i, nameEnd)) : "";
               var after = i > nameEnd ? full.slice(nameEnd, i) : "";
               text.replaceChildren();
-              if (before) text.append(document.createTextNode(before));
+              if (before) {
+                var helloText = before;
+                var trail = "";
+                if (before.charAt(before.length - 1) === " ") {
+                  helloText = before.slice(0, -1);
+                  trail = " ";
+                }
+                if (helloText) {
+                  var hello = document.createElement("span");
+                  hello.className = "hero-hello";
+                  hello.textContent = helloText;
+                  text.append(hello);
+                }
+                if (trail) text.append(document.createTextNode(trail));
+              }
               if (mid) {
                 var em = document.createElement("span");
                 em.className = "accent";

@@ -192,10 +192,22 @@ img { max-width: 100%; display: block; }
   text-wrap: balance;
 }
 
+.hero-hello {
+  font-family: "Oswald", "Arial Narrow", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+  color: var(--text);
+  white-space: nowrap;
+  vertical-align: baseline;
+}
+
 .accent {
   color: var(--yellow);
+  font-family: var(--display);
+  font-weight: 400;
   font-style: normal;
   white-space: nowrap;
+  vertical-align: baseline;
 }
 
 .typewrite { display: inline; }
