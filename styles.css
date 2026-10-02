@@ -27,6 +27,9 @@ html { scroll-behavior: smooth; }
 body {
   margin: 0;
   min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
   font-family: var(--font);
   color: var(--text);
   background:
@@ -74,6 +77,7 @@ img { max-width: 100%; display: block; }
   width: min(var(--max), calc(100% - 2.5rem));
   margin-inline: auto;
 }
+main { flex: 1 0 auto; }
 
 .top {
   display: flex;
@@ -134,6 +138,7 @@ img { max-width: 100%; display: block; }
   transition: color 0.15s ease;
 }
 .nav a:hover { color: var(--text); }
+.nav a[aria-current="page"] { color: var(--text); }
 
 .hero {
   padding: 2.6rem 0 2.4rem;
@@ -297,6 +302,7 @@ html.type-on .typewrite-row {
   gap: 0.4rem;
   margin-bottom: 1.25rem;
 }
+.section-head h1,
 .section-head h2 {
   margin: 0;
   font-family: var(--display);
@@ -427,6 +433,48 @@ html.type-on .typewrite-row {
 .foot a { color: var(--muted); text-decoration: none; }
 .foot a:hover { color: var(--text); }
 .foot-links { display: flex; gap: 0.55rem; align-items: center; }
+
+.crumbs {
+  margin: 0.85rem 0 0.15rem;
+  font-size: 0.92rem;
+  color: var(--muted);
+}
+.crumbs ol {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.45rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.crumbs li:not(:last-child)::after {
+  content: "/";
+  margin-left: 0.45rem;
+  color: rgba(255, 255, 255, 0.35);
+}
+.crumbs a {
+  color: var(--text);
+  text-decoration: none;
+}
+.crumbs a:hover { color: var(--yellow); }
+.crumbs [aria-current="page"] { color: var(--yellow); }
+
+body.home {
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+}
+body.home .top,
+body.home .foot { flex-shrink: 0; }
+body.home main {
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: safe center;
+}
+body.home .hero { padding-block: 1.25rem 1.5rem; }
 
 a:focus-visible,
 .btn:focus-visible,
