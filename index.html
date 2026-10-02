@@ -7,12 +7,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Chase Moalemi</title>
-  <meta name="description" content="Pokémon cards, sports cards, and all things sports.">
+  <meta name="description" content="Chase Moalemi collects cards, plays the Pokémon TCG, follows sports, and automates the back office of an automotive parts shop he runs with his brother.">
   <meta name="author" content="Chase Moalemi">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://chasemoalemi.com/">
   <meta property="og:title" content="Chase Moalemi">
-  <meta property="og:description" content="Pokémon cards, sports cards, and all things sports.">
+  <meta property="og:description" content="Chase Moalemi collects cards, plays the Pokémon TCG, follows sports, and automates the back office of an automotive parts shop he runs with his brother.">
   <meta property="og:url" content="https://chasemoalemi.com/">
   <meta property="og:type" content="profile">
   <meta property="og:site_name" content="Chase Moalemi">
@@ -26,15 +26,15 @@
   <meta property="profile:last_name" content="Moalemi">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Chase Moalemi">
-  <meta name="twitter:description" content="Pokémon cards, sports cards, and all things sports.">
+  <meta name="twitter:description" content="Chase Moalemi collects cards, plays the Pokémon TCG, follows sports, and automates the back office of an automotive parts shop he runs with his brother.">
   <meta name="twitter:image" content="https://chasemoalemi.com/images/og.png">
   <meta name="twitter:image:alt" content="Chase Moalemi">
-  <meta name="theme-color" content="#0055ff">
-  <meta name="color-scheme" content="light">
+  <meta name="theme-color" content="#07080c">
+  <meta name="color-scheme" content="dark">
   <meta name="application-name" content="Chase Moalemi">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Anton&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
@@ -47,46 +47,213 @@
     "@context": "https://schema.org",
     "@type": "Person",
     "name": "Chase Moalemi",
-    "givenName": "Chase",
-    "familyName": "Moalemi",
-    "url": "https://chasemoalemi.com/"
+    "url": "https://chasemoalemi.com"
   }
+  </script>
+  <script>
+    if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      document.documentElement.classList.add("type-on");
+    }
   </script>
 </head>
 <body>
   <a class="skip" href="#content">Skip to content</a>
+  <div class="glow glow-a" aria-hidden="true"></div>
+  <div class="glow glow-b" aria-hidden="true"></div>
+  <div class="glow glow-c" aria-hidden="true"></div>
 
-  <header class="hero">
-    <div class="shape s1" aria-hidden="true"></div>
-    <div class="shape s2" aria-hidden="true"></div>
-    <div class="shape s3" aria-hidden="true"></div>
-    <div class="wrap">
-      <h1>Chase <span>Moalemi</span></h1>
-      <p>Pokémon cards, sports cards, and all things sports.</p>
-    </div>
+  <header class="top">
+    <a class="mark" href="/" aria-label="Chase Moalemi, home"><span class="mark-letters">CM</span></a>
+    <nav class="nav" aria-label="Page">
+      <a href="#into">Into</a>
+      <a href="#now">Now</a>
+    </nav>
   </header>
-  <div class="stripe" aria-hidden="true"></div>
 
   <main id="content">
-    <h2>What I'm into</h2>
-    <div class="cards">
-      <section class="card c-red">
-        <h3>Card collecting</h3>
-        <p>Pokémon cards and sports cards.</p>
-      </section>
-      <section class="card c-yellow">
-        <h3>Pokémon TCG</h3>
-        <p>The Pokémon Trading Card Game.</p>
-      </section>
-      <section class="card c-pink">
-        <h3>Sports</h3>
-        <p>All of them.</p>
-      </section>
-    </div>
+    <section class="hero" aria-labelledby="hero-title">
+      <p class="eyebrow">Cards, sports, and the shop</p>
+      <div class="hero-heading">
+        <div class="badge" aria-hidden="true"><span class="badge-letters">CM</span></div>
+        <h1 id="hero-title" aria-label="Hi, I'm Chase Moalemi.">
+          <span class="typewrite" aria-hidden="true">
+            <span class="typewrite-ghost">Hi, I'm <span class="accent">Chase Moalemi</span>.<span class="typewrite-cursor typewrite-cursor-reserve">|</span></span>
+            <span class="typewrite-row"><span class="typewrite-text"></span><span class="typewrite-cursor">|</span></span>
+          </span>
+        </h1>
+        <script>
+          (function () {
+            var root = document.querySelector(".typewrite");
+            if (!root || !document.documentElement.classList.contains("type-on")) return;
+            var text = root.querySelector(".typewrite-text");
+            var full = "Hi, I'm Chase Moalemi.";
+            var name = "Chase Moalemi";
+            var nameAt = full.indexOf(name);
+            var nameEnd = nameAt + name.length;
+            var i = 0;
+            function paint() {
+              var before = full.slice(0, Math.min(i, nameAt));
+              var mid = i > nameAt ? full.slice(nameAt, Math.min(i, nameEnd)) : "";
+              var after = i > nameEnd ? full.slice(nameEnd, i) : "";
+              text.replaceChildren();
+              if (before) text.append(document.createTextNode(before));
+              if (mid) {
+                var em = document.createElement("span");
+                em.className = "accent";
+                em.textContent = mid;
+                text.append(em);
+              }
+              if (after) text.append(document.createTextNode(after));
+            }
+            function tick() {
+              if (i >= full.length) return;
+              i += 1;
+              paint();
+              if (i < full.length) window.setTimeout(tick, 70);
+            }
+            window.setTimeout(tick, 70);
+          })();
+        </script>
+      </div>
+      <p class="lede" id="subtitle">I spend my time on cards, the Pokémon TCG, and whatever sport the calendar is currently serious about. The rest of the day I work with my brother Ryan, running an online auto parts shop and automating the tedious parts of it.</p>
+      <p class="lede muted">Free hours go to the cards and the games. Work hours go to orders, listings, and the jobs that should not need a person every time.</p>
+      <div class="hero-actions">
+        <a class="btn primary" href="#into">What I'm into</a>
+        <a class="btn ghost" href="#now">Right now</a>
+      </div>
+    </section>
+
+    <section class="band" id="into" aria-labelledby="into-heading">
+      <div class="section-head">
+        <h2 id="into-heading">What I'm into</h2>
+        <p class="section-sub">Three interests. I have put real time into each, and I can be particular about all of them.</p>
+      </div>
+      <ul class="app-grid">
+        <li>
+          <article class="app-card">
+            <span class="app-icon icon-yellow" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round">
+                <rect x="7" y="3.5" width="12" height="16" rx="1.6"/>
+                <rect x="4" y="6.5" width="12" height="16" rx="1.6" fill="currentColor" stroke="none" opacity="0.18"/>
+                <rect x="4" y="6.5" width="12" height="16" rx="1.6"/>
+              </svg>
+            </span>
+            <div class="app-body">
+              <h3 class="app-name">Card collecting</h3>
+              <p class="app-desc">Pokémon cards and sports cards. I like a collection with a point of view: what you chase, what you trade, and what you refuse to let go of once you have held it.</p>
+            </div>
+          </article>
+        </li>
+        <li>
+          <article class="app-card">
+            <span class="app-icon icon-blue" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round">
+                <rect x="4" y="5" width="16" height="14" rx="2"/>
+                <path d="M8 9h8M8 12.5h5"/>
+                <circle cx="16.2" cy="14.8" r="1.2" fill="currentColor" stroke="none"/>
+              </svg>
+            </span>
+            <div class="app-body">
+              <h3 class="app-name">The Pokémon TCG</h3>
+              <p class="app-desc">I play the game, not just the market around it. Deck building, sequencing, and the minute a tidy plan meets a better one across the table.</p>
+            </div>
+          </article>
+        </li>
+        <li>
+          <article class="app-card">
+            <span class="app-icon icon-pink" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <circle cx="12" cy="12" r="7.2"/>
+                <path d="M12 4.8v14.4M5.2 9.2c2.2 1.3 4.4 1.3 6.8 0s4.6-1.3 6.8 0M5.2 14.8c2.2-1.3 4.4-1.3 6.8 0s4.6 1.3 6.8 0" stroke-linecap="round"/>
+              </svg>
+            </span>
+            <div class="app-body">
+              <h3 class="app-name">Sports</h3>
+              <p class="app-desc">All of them, in their season. I follow the calendar as it overlaps, which means there is usually a game worth knowing about and a table I am taking too personally.</p>
+            </div>
+          </article>
+        </li>
+      </ul>
+    </section>
+
+    <section class="band" id="now" aria-labelledby="now-heading">
+      <div class="section-head">
+        <h2 id="now-heading">Right now</h2>
+        <p class="section-sub">What actually has the hours, in the shop and out of it.</p>
+      </div>
+
+      <article class="feature">
+        <p class="kicker">With my brother</p>
+        <h3>An automotive parts shop on Shopify</h3>
+        <p>My older brother <a href="https://ryanmoalemi.app">Ryan</a> and I run Shopify stores together. One of them sells automotive parts. My work is the operation under the storefront: orders, listings, and the repetitive back-office tasks that quietly wreck a week if you do them by hand. I automate those tasks. The aim is plain. A listing should stay accurate, an order should move without a scavenger hunt, and the two of us should spend our time on the exceptions. It is a small shop. That is not an excuse for a sloppy one.</p>
+      </article>
+
+      <ul class="app-grid">
+        <li>
+          <article class="app-card">
+            <span class="app-icon icon-red" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round">
+                <rect x="3.5" y="6" width="11" height="14" rx="1.5"/>
+                <rect x="9.5" y="4" width="11" height="14" rx="1.5"/>
+              </svg>
+            </span>
+            <div class="app-body">
+              <h3 class="app-name">The collection</h3>
+              <p class="app-desc">Building it with a filter. Chasing pulls, making trades, and getting pickier about which cards deserve a sleeve.</p>
+            </div>
+          </article>
+        </li>
+        <li>
+          <article class="app-card">
+            <span class="app-icon icon-blue" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 16.5l4.2-4.2 3 3L19 7.5"/>
+                <path d="M14 7.5h5v5"/>
+              </svg>
+            </span>
+            <div class="app-body">
+              <h3 class="app-name">At the table</h3>
+              <p class="app-desc">More Pokémon TCG, played on purpose. I want to know why a line worked, especially on the nights it did not.</p>
+            </div>
+          </article>
+        </li>
+        <li>
+          <article class="app-card">
+            <span class="app-icon icon-yellow" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <rect x="4" y="5" width="16" height="15" rx="2"/>
+                <path d="M4 9.5h16M8 3.5v3M16 3.5v3" stroke-linecap="round"/>
+              </svg>
+            </span>
+            <div class="app-body">
+              <h3 class="app-name">The sports year</h3>
+              <p class="app-desc">Following seasons as they hand off. I try to show up for the stretch that decides something, not only the highlight.</p>
+            </div>
+          </article>
+        </li>
+        <li>
+          <article class="app-card">
+            <span class="app-icon icon-pink" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round">
+                <rect x="3.5" y="5" width="17" height="14" rx="2"/>
+                <path d="M3.5 9h17" stroke-linecap="round"/>
+              </svg>
+            </span>
+            <div class="app-body">
+              <h3 class="app-name">This site</h3>
+              <p class="app-desc">Designing chasemoalemi.com and writing it myself. If you searched my name, I would rather you landed here than on a blank page.</p>
+            </div>
+          </article>
+        </li>
+      </ul>
+    </section>
   </main>
 
-  <footer>
+  <footer class="foot">
     <p>© <span id="year">2026</span> Chase Moalemi</p>
+    <p class="foot-links">
+      <a href="https://chasemoalemi.com/">chasemoalemi.com</a>
+    </p>
   </footer>
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
