@@ -152,7 +152,7 @@ img { max-width: 100%; display: block; }
   display: flex;
   align-items: center;
   gap: 1.05rem;
-  margin: 0;
+  margin: 0 0 1.15rem;
 }
 
 .badge {
@@ -162,6 +162,7 @@ img { max-width: 100%; display: block; }
   border-radius: 50%;
   display: grid;
   place-items: center;
+  overflow: hidden;
   background:
     radial-gradient(circle at 30% 25%, rgba(255, 255, 0, 0.2), transparent 46%),
     #10131a;
@@ -171,6 +172,13 @@ img { max-width: 100%; display: block; }
   font-size: 1.7rem;
   letter-spacing: 0.04em;
   line-height: 1;
+}
+
+.badge img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
 }
 
 .hero h1 {
@@ -187,6 +195,7 @@ img { max-width: 100%; display: block; }
 .accent {
   color: var(--yellow);
   font-style: normal;
+  white-space: nowrap;
 }
 
 .typewrite { display: inline; }
@@ -225,7 +234,7 @@ html.type-on .typewrite-row {
 }
 
 .hero-intro {
-  margin: 0 0 1.15rem;
+  margin: 0;
   max-width: 38rem;
   font-size: 1.16rem;
   line-height: 1.55;
@@ -434,10 +443,14 @@ a:focus-visible,
   .foot { flex-direction: column; align-items: flex-start; }
 }
 
+@media (max-width: 348px) {
+  .hero h1 { font-size: 2.05rem; }
+}
+
 @media (max-height: 820px) and (min-width: 900px) {
   .top { padding-top: 0.75rem; }
   .hero { padding: 1.45rem 0 1.5rem; }
-  .hero-intro { margin-bottom: 0.9rem; }
+  .hero-heading { margin-bottom: 0.9rem; }
   .hero-actions { margin-top: 0.95rem; }
 }
 
