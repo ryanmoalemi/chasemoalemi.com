@@ -225,20 +225,25 @@ html.type-on .typewrite-row {
 }
 
 .lede {
-  margin: 0 0 0.7rem;
-  max-width: 40rem;
-  font-size: 1.08rem;
-  color: #e7ebf5;
+  margin: 0 0 0.85rem;
+  max-width: 38rem;
+  font-size: 1.05rem;
+  color: var(--muted);
   text-wrap: pretty;
 }
 .lede.muted { color: var(--muted); }
+.lede a {
+  color: var(--yellow);
+  text-underline-offset: 0.16em;
+}
+.lede a:hover { color: #fff6a3; }
 
 .hero-intro {
   margin: 0;
-  max-width: 40rem;
-  font-size: 0.98rem;
-  line-height: 1.6;
-  color: #e7ebf5;
+  max-width: 38rem;
+  font-size: 1.16rem;
+  line-height: 1.55;
+  color: #f6f7fb;
   text-wrap: pretty;
 }
 
