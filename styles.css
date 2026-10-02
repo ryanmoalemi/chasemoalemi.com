@@ -152,7 +152,7 @@ img { max-width: 100%; display: block; }
   display: flex;
   align-items: center;
   gap: 1.05rem;
-  margin: 0 0 1.05rem;
+  margin: 0;
 }
 
 .badge {
@@ -224,22 +224,8 @@ html.type-on .typewrite-row {
   50% { opacity: 0; }
 }
 
-.lede {
-  margin: 0 0 0.85rem;
-  max-width: 38rem;
-  font-size: 1.05rem;
-  color: var(--muted);
-  text-wrap: pretty;
-}
-.lede.muted { color: var(--muted); }
-.lede a {
-  color: var(--yellow);
-  text-underline-offset: 0.16em;
-}
-.lede a:hover { color: #fff6a3; }
-
 .hero-intro {
-  margin: 0;
+  margin: 0 0 1.15rem;
   max-width: 38rem;
   font-size: 1.16rem;
   line-height: 1.55;
@@ -451,8 +437,7 @@ a:focus-visible,
 @media (max-height: 820px) and (min-width: 900px) {
   .top { padding-top: 0.75rem; }
   .hero { padding: 1.45rem 0 1.5rem; }
-  .hero-heading { margin-bottom: 0.75rem; }
-  .lede { margin-bottom: 0.6rem; }
+  .hero-intro { margin-bottom: 0.9rem; }
   .hero-actions { margin-top: 0.95rem; }
 }
 
