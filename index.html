@@ -7,12 +7,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Chase Moalemi</title>
-  <meta name="description" content="Personal site of Chase Moalemi.">
+  <meta name="description" content="Pokémon cards, sports cards, and all things sports.">
   <meta name="author" content="Chase Moalemi">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://chasemoalemi.com/">
   <meta property="og:title" content="Chase Moalemi">
-  <meta property="og:description" content="Personal site of Chase Moalemi.">
+  <meta property="og:description" content="Pokémon cards, sports cards, and all things sports.">
   <meta property="og:url" content="https://chasemoalemi.com/">
   <meta property="og:type" content="profile">
   <meta property="og:site_name" content="Chase Moalemi">
@@ -26,15 +26,15 @@
   <meta property="profile:last_name" content="Moalemi">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Chase Moalemi">
-  <meta name="twitter:description" content="Personal site of Chase Moalemi.">
+  <meta name="twitter:description" content="Pokémon cards, sports cards, and all things sports.">
   <meta name="twitter:image" content="https://chasemoalemi.com/images/og.png">
   <meta name="twitter:image:alt" content="Chase Moalemi">
-  <meta name="theme-color" content="#07080c">
-  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#0055ff">
+  <meta name="color-scheme" content="light">
   <meta name="application-name" content="Chase Moalemi">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
@@ -52,119 +52,44 @@
     "url": "https://chasemoalemi.com/"
   }
   </script>
-  <script>
-    if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-      document.documentElement.classList.add("type-on");
-    }
-  </script>
 </head>
 <body>
   <a class="skip" href="#content">Skip to content</a>
-  <div class="glow glow-a" aria-hidden="true"></div>
-  <div class="glow glow-b" aria-hidden="true"></div>
 
-  <header class="top">
-    <a class="mark" href="/" aria-label="CM"><span class="mark-letters">CM</span></a>
+  <header class="hero">
+    <div class="shape s1" aria-hidden="true"></div>
+    <div class="shape s2" aria-hidden="true"></div>
+    <div class="shape s3" aria-hidden="true"></div>
+    <div class="wrap">
+      <h1>Chase <span>Moalemi</span></h1>
+      <p>Pokémon cards, sports cards, and all things sports.</p>
+    </div>
   </header>
+  <div class="stripe" aria-hidden="true"></div>
 
   <main id="content">
-    <section class="hero">
-      <div class="hero-heading">
-        <!-- Replace images/chase.jpg to swap in a photo. The CM initials show if that file is missing. -->
-        <div class="portrait-wrap">
-          <img class="portrait" src="images/chase.jpg" alt="Chase Moalemi" width="88" height="88" onerror="this.closest('.portrait-wrap').classList.add('is-fallback')">
-          <span class="portrait-fallback" aria-hidden="true">CM</span>
-        </div>
-        <h1 aria-label="Hi, I'm Chase Moalemi">
-          <span class="typewrite" aria-hidden="true">
-            <span class="typewrite-ghost">Hi, I'm <span class="accent">Chase Moalemi</span><span class="typewrite-cursor typewrite-cursor-reserve">|</span></span>
-            <span class="typewrite-row"><span class="typewrite-text"></span><span class="typewrite-cursor">|</span></span>
-          </span>
-        </h1>
-      </div>
-      <script>
-          (function () {
-            var root = document.querySelector(".typewrite");
-            if (!root || !document.documentElement.classList.contains("type-on")) return;
-            var text = root.querySelector(".typewrite-text");
-            var full = "Hi, I'm Chase Moalemi";
-            var name = "Chase Moalemi";
-            var nameAt = full.indexOf(name);
-            var nameEnd = nameAt + name.length;
-            var i = 0;
-            function paint() {
-              var before = full.slice(0, Math.min(i, nameAt));
-              var mid = i > nameAt ? full.slice(nameAt, Math.min(i, nameEnd)) : "";
-              var after = i > nameEnd ? full.slice(nameEnd, i) : "";
-              text.replaceChildren();
-              if (before) text.append(document.createTextNode(before));
-              if (mid) {
-                var em = document.createElement("span");
-                em.className = "accent";
-                em.textContent = mid;
-                text.append(em);
-              }
-              if (after) text.append(document.createTextNode(after));
-            }
-            function tick() {
-              if (i >= full.length) return;
-              i += 1;
-              paint();
-              if (i < full.length) window.setTimeout(tick, 70);
-            }
-            window.setTimeout(tick, 70);
-          })();
-      </script>
-      <p class="lede">More soon.</p>
-    </section>
-
-    <section class="section" id="about" hidden>
-      <div class="section-head">
-        <h2>About</h2>
-      </div>
-      <div class="section-body">
-        <!-- This stays hidden until there is text or an image here. -->
-      </div>
-    </section>
-
-    <section class="section" id="work" hidden>
-      <div class="section-head">
-        <h2>Work</h2>
-      </div>
-      <div class="section-body">
-        <!-- This stays hidden until there is text or an image here. -->
-      </div>
-    </section>
-
-    <section class="section" id="links" hidden>
-      <div class="section-head">
-        <h2>Links</h2>
-      </div>
-      <div class="section-body">
-        <!-- This stays hidden until there is text or an image here. -->
-      </div>
-    </section>
+    <h2>What I'm into</h2>
+    <div class="cards">
+      <section class="card c-red">
+        <h3>Card collecting</h3>
+        <p>Pokémon cards and sports cards.</p>
+      </section>
+      <section class="card c-yellow">
+        <h3>Pokémon TCG</h3>
+        <p>The Pokémon Trading Card Game.</p>
+      </section>
+      <section class="card c-pink">
+        <h3>Sports</h3>
+        <p>All of them.</p>
+      </section>
+    </div>
   </main>
 
-  <footer class="foot">
+  <footer>
     <p>© <span id="year">2026</span> Chase Moalemi</p>
   </footer>
-
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
-
-    var photo = document.querySelector(".portrait");
-    if (photo && photo.complete && photo.naturalWidth === 0) {
-      photo.closest(".portrait-wrap").classList.add("is-fallback");
-    }
-
-    document.querySelectorAll(".section").forEach(function (section) {
-      var body = section.querySelector(".section-body");
-      if (!body) return;
-      var text = (body.textContent || "").replace(/\s+/g, "");
-      var media = body.querySelector("img, video, audio, iframe, picture, svg");
-      if (text.length > 0 || media) section.hidden = false;
-    });
   </script>
 </body>
 </html>
