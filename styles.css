@@ -473,30 +473,6 @@ html.type-on .typewrite-row {
   text-wrap: pretty;
 }
 
-.photo {
-  margin: 0;
-}
-.photo img {
-  width: 100%;
-  height: auto;
-  aspect-ratio: 3 / 2;
-  object-fit: cover;
-  border-radius: var(--radius);
-  border: 1px solid var(--line);
-  background: #10131a;
-}
-.photo figcaption {
-  margin: 0.45rem 0 0;
-  font-size: 0.86rem;
-  line-height: 1.45;
-  color: var(--muted);
-}
-.photo figcaption a {
-  color: inherit;
-  text-underline-offset: 0.16em;
-}
-.photo figcaption a:hover { color: var(--text); }
-
 body.home {
   min-height: 100vh;
   min-height: 100dvh;
