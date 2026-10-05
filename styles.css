@@ -461,12 +461,12 @@ html.type-on .typewrite-row {
 .crumbs [aria-current="page"] { color: var(--yellow); }
 
 .note {
+  max-width: 38rem;
   display: grid;
   gap: 1.05rem;
 }
 .note p {
   margin: 0;
-  max-width: 38rem;
   font-size: 1.12rem;
   line-height: 1.6;
   color: var(--text);
